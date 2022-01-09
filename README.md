@@ -32,9 +32,9 @@ Write a purely front-end (react) JavaScript application to help you find movies!
 
 ## First thoughts:
 
-- I was thinking, I will use **Redux** for this project, but i have canceled it, because the data flows through only 3 different level.
+- I was thinking, I will use **Redux** for this project, but I have canceled it, because the data flows through only 3 different levels.
 - The task says we need to create a search button. Instead of the search button, the data fetching starts after 0.6 seconds when the user stopped the typing. Not ideal on mobile devices.
-- The task says the desing is absolutly secondary, but i have tried to do my best.
+- The task says the design is absolutely secondary, but I have tried to do my best.
 - Usually i am using Semantic UI, but in this project has been made with the mentioned Material UI.
 
 ## Structure:
@@ -46,7 +46,7 @@ Write a purely front-end (react) JavaScript application to help you find movies!
     - Modal With the detailed data
       - Wikipedia popup window
   - Spinner
-  - Modal window for unsuccesfull data fetching
+  - Modal window for unsuccessful data fetching
 
  </br>
 <img src="https://referenceprojects-abkno.run-eu-central1.goorm.io/src/github/testdocuments/apexfrontendtest2.jpg" height="400px" >
