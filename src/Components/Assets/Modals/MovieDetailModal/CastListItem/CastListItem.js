@@ -4,30 +4,14 @@ const formatter = new Formatter();
 
 const CastListItem = (props) => {
   let { id, person, role } = props.castPerson;
+  const noDataPlaceHolder = "No Data";
 
-  let name;
-  let character;
+  let name = person?.name || noDataPlaceHolder;
 
-  try {
-    name = person.name;
-  } catch (error) {
-    name = "No Data";
-  }
+  let character = role?.character || noDataPlaceHolder;
+  if (role.character.length > 27) character = formatter.stringTrimmer(role.character, 27);
 
-  try {
-    character = role.character;
-    if (role.character.length > 27) role.character = formatter.stringTrimmer(role.character, 27);
-  } catch (error) {
-    character = "No Data";
-  }
-
-  let photoUrl;
-
-  try {
-    photoUrl = person.images[0].small;
-  } catch (error) {
-    photoUrl = "/no_image.jpg";
-  }
+  let photoUrl = person?.images[0]?.small || "/no_image.jpg";
 
   return (
     <div key={id} className="CastItem">

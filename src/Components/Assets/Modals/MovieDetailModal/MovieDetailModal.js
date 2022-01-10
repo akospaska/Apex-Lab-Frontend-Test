@@ -38,20 +38,8 @@ const MovieDetailModal = (props) => {
 
   const { genres, id, name, releaseDate, score, budget, revenue, poster, similar } = props.movieData;
 
-  let movieImg;
-  let cast;
-
-  try {
-    cast = props.movieData.cast;
-  } catch (error) {
-    cast = [];
-  }
-
-  try {
-    movieImg = poster.large;
-  } catch (error) {
-    movieImg = "no_image.jpg";
-  }
+  const movieImg = poster?.large || "no_image.jpg";
+  const cast = props?.movieData?.cast || [];
 
   //Open a new tab based on the wikipedia search result
   const openWikiTab = (pageId) => {
